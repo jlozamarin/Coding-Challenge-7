@@ -84,4 +84,4 @@ function calculateEmployeeSalary(employee) {
     return total; //Note: Return the total salary for employees/subordinates
 }
 
-
+console.log(calculateDepartmentSalary(departments)); 
