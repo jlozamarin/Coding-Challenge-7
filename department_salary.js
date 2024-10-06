@@ -1,6 +1,5 @@
 
-
-// Task 1
+// Task 1: Create a Department Structure
 let company = {
     departments: [
         {
@@ -61,18 +60,16 @@ let company = {
 };
 console.log(company);
 
-// Task 2
+// Task 2: Create a Recursive Function to Calculate Total Salary for a Department
 function calculateDepartmentSalary(department) {
     let totalSalary = 0;
     department.employees.forEach(employee => {
         totalSalary += calculateEmployeeSalary(employee);
      });
 
-return totalSalary; // return the total salary for the departments
+return totalSalary; // Return the total salary for the departments
 
 }
-
-//Task 3
 function calculateEmployeeSalary(employee) {
     let total = employee.salary; 
 
@@ -82,23 +79,21 @@ function calculateEmployeeSalary(employee) {
         });
 
     }
-    return total; //return the total salary for employees/subordinates
+    return total; //Return the total salary for employees/subordinates
 }
 
-//Task 4
+//Task 3: Create a Function to Calculate the Total Salary for All Departments
 function calculateTotalCompanySalary(company) {
     let totalCompanySalary = 0;
     company.departments.forEach(department => {
         totalCompanySalary += calculateDepartmentSalary(department);
     });
-    return totalCompanySalary; //returns total salary expenses for the company
+    return totalCompanySalary; //Returns total salary expenses for the company
 }
 
-const marketingDepartment = company.departments.find(dept => dept.departmentName === "Marketing"); //find market dept
-const financeDepartment = company.departments.find(dept => dept.departmentName === "Finance"); //find finance dept
+let marketingDepartment = company.departments.find(dept => dept.departmentName === "Marketing"); //Find market dept
+let financeDepartment = company.departments.find(dept => dept.departmentName === "Finance"); //Find finance dept
 
-console.log("Total Marketing Department salary: $" + calculateDepartmentSalary(marketingDepartment)); //display market salary
-console.log("Total Finance Department salary: $" + calculateDepartmentSalary(financeDepartment)); //display finance salary
-
-
-console.log("Total company salary: $" + calculateTotalCompanySalary(company)); //display company salary
+console.log("Total Marketing Department salary: $" + calculateDepartmentSalary(marketingDepartment)); //Display market salary, Output: 320000
+console.log("Total Finance Department salary: $" + calculateDepartmentSalary(financeDepartment)); //Display finance salary, Output: 300000
+console.log("Total company salary: $" + calculateTotalCompanySalary(company)); //Display company salary, Output: 620000
