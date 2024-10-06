@@ -77,11 +77,11 @@ function calculateEmployeeSalary(employee) {
 
     if (employee.subordinates.length > 0) {
         employee.subordinates.forEach(subordinates => {
-            total += calculateEmployeeSalary(subordinate);
+            total += calculateEmployeeSalary(subordinates); //changed from subordinate to subordinates
         });
 
     }
     return total; //Note: Return the total salary for employees/subordinates
 }
 
-console.log(calculateDepartmentSalary(department)); 
+console.log(calculateDepartmentSalary(departments)); //error w departments vs department but output shows on departments?
