@@ -98,7 +98,7 @@ const marketingDepartment = company.departments.find(dept => dept.departmentName
 const financeDepartment = company.departments.find(dept => dept.departmentName === "Finance"); //find finance dept
 
 console.log("Total Marketing Department salary: $" + calculateDepartmentSalary(marketingDepartment)); //display market salary
-console.log("Total Finance Department salary: $\n\n" + calculateDepartmentSalary(financeDepartment)); //display finance salary
+console.log("Total Finance Department salary: $\" + calculateDepartmentSalary(financeDepartment)); //display finance salary
 
 
 console.log("Total company salary: $" + calculateTotalCompanySalary(company)); //display company salary
