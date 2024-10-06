@@ -83,7 +83,7 @@ function calculateEmployeeSalary(employee) {
 }
 
 //Task 3: Create a Function to Calculate the Total Salary for All Departments
-function calculateTotalCompanySalary(company) {
+function calculateCompanySalary(company) {
     let totalCompanySalary = 0;
     company.departments.forEach(department => {
         totalCompanySalary += calculateDepartmentSalary(department);
@@ -96,4 +96,4 @@ let financeDepartment = company.departments.find(dept => dept.departmentName ===
 
 console.log("Total Marketing Department salary: $" + calculateDepartmentSalary(marketingDepartment)); //Display market salary, Output: 320000
 console.log("Total Finance Department salary: $" + calculateDepartmentSalary(financeDepartment)); //Display finance salary, Output: 300000
-console.log("Total company salary: $" + calculateTotalCompanySalary(company)); //Display company salary, Output: 620000
+console.log("Total company salary: $" + calculateCompanySalary(company)); //Display company salary, Output: 620000
